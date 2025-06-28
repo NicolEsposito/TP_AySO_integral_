@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: tp-div-313-grupo-los-seis  # sin tu nombre de usuario
+    image: tp-div-313-grupo-los-seis
     ports:
       - "8081:80"
     volumes:
