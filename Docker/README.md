@@ -1,3 +1,4 @@
+
 # R5 - Docker
 
 Este directorio contiene la resolución del punto R5 del Trabajo Práctico Integral de Arquitectura y Sistemas Operativos.
@@ -16,6 +17,3 @@ Se construyó una imagen Docker basada en `nginx` que sirve una página HTML (`i
 ## 🔧 Cómo correrlo
 
 Desde esta carpeta, ejecutar:
-
-```bash
-docker-compose up

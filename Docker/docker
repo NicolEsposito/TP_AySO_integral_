@@ -1,1 +1,12 @@
 
+version: '3'
+services:
+  web:
+    image: axeldzumaga/TP-Div_313_Grupo_Los-seis
+    ports:
+      - "8081:80"
+    volumes:
+      - ./web/file/:/usr/share/nginx/html/file/
+
+
+
