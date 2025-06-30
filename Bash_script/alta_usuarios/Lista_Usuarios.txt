@@ -1,0 +1,6 @@
+r1nicole:G_R1
+r2martin:G_R2
+r3nicolas:G_R3
+r4marshall:G_R4
+r5axel:G_R5
+r6bryan:G_R6
