@@ -1,0 +1,12 @@
+---
+- name: Instalando apache y otros paquetes
+  become: yes
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - "{{ WEB_SERVICE }}"
+    - htop
+    - tmux
+    - speedtest-cli
+
