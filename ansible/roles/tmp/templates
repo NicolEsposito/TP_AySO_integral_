@@ -1,0 +1,28 @@
+Nombre Grupo: {{ ayso }}
+
+División: {{ 313 }}
+
+Fecha: {{ 30/6 }}
+
+distro: "{{ ansible_distribution }}"
+
+cores: "{{ ansible_processor_vcpus }}"
+
+R1: Nombre: {{ Nicole }}
+Apellido: {{ Esposito }}
+
+R2: Nombre: {{ Martín }}
+Apellido: {{ Ciares }}
+
+R3: Nombre: {{ Nicolás }}
+Apellido: {{ Díaz }}
+
+R4: Nombre: {{ Marshall }}
+Apellido: {{ Cámara }}
+
+R5: Nombre: {{ Axel }}
+Apellido: {{ Dzumaga }}
+
+R6: Nombre: {{ Bryan }}
+Apellido: {{ Rocha }}
+

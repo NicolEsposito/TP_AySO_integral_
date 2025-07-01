@@ -1,0 +1,43 @@
+---
+- name: Crear grupos y usuarios
+  hosts: all
+  become: yes
+  vars:
+    vagrant_pass: "{{ 'vagrant' | password_hash('sha512') }}"
+    usuarios:
+      - { usuario: "r1", nombre: "Nicole Esposito", grupo_principal: "GR1" }
+      - { usuario: "r2", nombre: "Martin Ciares", grupo_principal: "GR2" }
+      - { usuario: "r3", nombre: "Nico Diaz", grupo_principal: "GR3" }
+      - { usuario: "r4", nombre: "Marshall", grupo_principal: "GR4" }
+      - { usuario: "r5", nombre: "Axel Dzumaga", grupo_principal: "GR5" }
+      - { usuario: "r6", nombre: "Bryan", grupo_principal: "GR6" }
+
+  tasks:
+    - name: Crear grupos principales
+      group:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - GR1
+        - GR2
+        - GR3
+        - GR4
+        - GR5
+        - GR6
+
+    - name: Crear grupo secundario del equipo
+      group:
+        name: LosPibes
+        state: present
+
+    - name: Crear usuarios del grupo
+      user:
+        name: "{{ item.usuario }}"
+        comment: "{{ item.nombre }}"
+        groups: LosPibes
+        group: "{{ item.grupo_principal }}"
+        shell: /bin/bash
+        password: "{{ vagrant_pass }}"
+        state: present
+      loop: "{{ usuarios }}"
+
